@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+}
+header{
+    background-color: brown;
+    font-size: 5rem;
+    color: silver;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Smooch', cursive;
+}
+.welcomeNote{
+    font-size: 7rem;
+    color: blueviolet;
+    text-align: center;
+    grid-area: 1/1/2/3;
+    
+}
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    
+    
+}
+#panel{
+    background-color: orange;
+    
+}
+.landingInterface{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center ;
+    justify-items: center;
+}
+
+.landingInterface>button{
+    padding: 10px;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.5rem;
+}
+.landingInterface>button:hover{
+    background-color: rgb(24, 100, 1);
+    color: wheat;
+}
+.addBookInterface>fieldset{
+    margin: 20px;
+    display: grid;
+    justify-items: start;
+    grid-template-columns:   auto 1fr ;
+
+    
+    grid-gap: 10px;
+
+}
+
+.addBookInterface>fieldset>fieldset{
+    grid-area: 4/1/5/3;
+    justify-self:stretch;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    
+}
+
+.addBookInterface>fieldset>input[type='text'],.addBookInterface>fieldset>input[type='number']{
+    justify-self:left;
+    width: 50%;
+    margin-left: 100px;
+}  
+
+.addBookInterface>fieldset>button[onclick="switchInterface('showBooks')"]{
+    justify-self: right;
+}
+
+.addBookInterface>fieldset>button{
+    background-color: green;
+    border:0.5px solid blue;
+    border-radius: 5px;
+    padding: 2px 10px;
+    font-size: 1.01rem;
+    color: whitesmoke;
+}
+.addBookInterface>fieldset>button:hover{
+    background-color: rgb(11, 112, 2);
+    color: wheat;
+}
+
+label[for="radioTrue"]{
+    padding: 0 10px;
+}
+
+ label[for="radioFalse"]{
+    padding: 0 10px;
+}
+
+.showBookInterface{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-rows: 1fr auto;
+}
+.cardHolder{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    
+}
+.bookCard{
+    background-color: rgba(127, 255, 212, 0.151);
+    margin: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    display: grid;
+    grid-template-areas: "b a"
+    "c a"
+    "d a";
+
+}
+.bookCard>.bookTitle{
+    font-size: 1.2rem;
+    color: brown;
+
+
+}
+
+.bookCard>.bookAuthor{
+    color: aquamarine;
+}
+
+.bookCard>.noOfPages{
+    color: green;
+}
+.bookCard>.readStatus{
+    color: azure;
+}
+.bookCard>button{
+    grid-area: a;
+    justify-self: center;
+    align-self: center;
+}
+.bookCard>button,.showBookInterface>button{
+ 
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 0.1px solid blue;
+    background-color: green;
+    color: whitesmoke;
+    font-size: 1.01rem;
+    
+}
+.bookCard>button:hover,.showBookInterface>button:hover{
+    background-color: rgb(28, 110, 3);
+    color: wheat;
+}
+.showBookInterface>button[onclick="switchInterface('addBooks')"]{
+    justify-self: center;
+    
+    margin: 20px;
+}
